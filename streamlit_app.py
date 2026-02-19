@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 from io import StringIO
 
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = st.secrets["GITHUB_TOKEN"]
 
 def extract_username(url):
     url = url.strip()
@@ -104,6 +104,7 @@ if csv_file and output_filename:
             mime="text/plain"
 
         )
+
 
 
 
