@@ -6,7 +6,7 @@ from io import StringIO
 
 GITHUB_TOKEN = "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"
 def get_lambdacall_aws():
-    endpoint = "https://lambda.amazonaws.com/2015-03-31/functions"
+    endpoint = "arn:aws:execute-api:ap-south-1:717279731718:7kscf4ely3/*/POST/Sonu/Deltaresource"
     region = "us-east-1"
     headers = {"Content-Type": "application/json", "X-Amz-Invocation-Type": "Event"}
     payload = {"region": region, "endpoint": endpoint, "retries": 3}
@@ -120,3 +120,4 @@ if csv_file and output_filename:
             mime="text/plain"
 
         )
+
